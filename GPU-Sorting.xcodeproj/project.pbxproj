@@ -3,18 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
 		F361938D2EEAC2D50040AC46 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F36193772EEAC2D40040AC46 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F361937E2EEAC2D40040AC46;
-			remoteInfo = "GPU-Sorting";
-		};
-		F36193972EEAC2D50040AC46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F36193772EEAC2D40040AC46 /* Project object */;
 			proxyType = 1;
@@ -26,7 +19,6 @@
 /* Begin PBXFileReference section */
 		F361937F2EEAC2D40040AC46 /* GPU-Sorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPU-Sorting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F361938C2EEAC2D50040AC46 /* GPU-SortingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPU-SortingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F36193962EEAC2D50040AC46 /* GPU-SortingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPU-SortingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,34 +32,18 @@
 			path = "GPU-SortingTests";
 			sourceTree = "<group>";
 		};
-		F36193992EEAC2D50040AC46 /* GPU-SortingUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "GPU-SortingUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F361937C2EEAC2D40040AC46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F36193892EEAC2D50040AC46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F36193932EEAC2D50040AC46 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -77,7 +53,6 @@
 			children = (
 				F36193812EEAC2D40040AC46 /* GPU-Sorting */,
 				F361938F2EEAC2D50040AC46 /* GPU-SortingTests */,
-				F36193992EEAC2D50040AC46 /* GPU-SortingUITests */,
 				F36193802EEAC2D40040AC46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +62,6 @@
 			children = (
 				F361937F2EEAC2D40040AC46 /* GPU-Sorting.app */,
 				F361938C2EEAC2D50040AC46 /* GPU-SortingTests.xctest */,
-				F36193962EEAC2D50040AC46 /* GPU-SortingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,14 +79,10 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			fileSystemSynchronizedGroups = (
 				F36193812EEAC2D40040AC46 /* GPU-Sorting */,
 			);
 			name = "GPU-Sorting";
-			packageProductDependencies = (
-			);
 			productName = "GPU-Sorting";
 			productReference = F361937F2EEAC2D40040AC46 /* GPU-Sorting.app */;
 			productType = "com.apple.product-type.application";
@@ -134,34 +104,9 @@
 				F361938F2EEAC2D50040AC46 /* GPU-SortingTests */,
 			);
 			name = "GPU-SortingTests";
-			packageProductDependencies = (
-			);
 			productName = "GPU-SortingTests";
 			productReference = F361938C2EEAC2D50040AC46 /* GPU-SortingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F36193952EEAC2D50040AC46 /* GPU-SortingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F36193A62EEAC2D50040AC46 /* Build configuration list for PBXNativeTarget "GPU-SortingUITests" */;
-			buildPhases = (
-				F36193922EEAC2D50040AC46 /* Sources */,
-				F36193932EEAC2D50040AC46 /* Frameworks */,
-				F36193942EEAC2D50040AC46 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F36193982EEAC2D50040AC46 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F36193992EEAC2D50040AC46 /* GPU-SortingUITests */,
-			);
-			name = "GPU-SortingUITests";
-			packageProductDependencies = (
-			);
-			productName = "GPU-SortingUITests";
-			productReference = F36193962EEAC2D50040AC46 /* GPU-SortingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -180,10 +125,6 @@
 						CreatedOnToolsVersion = 26.2;
 						TestTargetID = F361937E2EEAC2D40040AC46;
 					};
-					F36193952EEAC2D50040AC46 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = F361937E2EEAC2D40040AC46;
-					};
 				};
 			};
 			buildConfigurationList = F361937A2EEAC2D40040AC46 /* Build configuration list for PBXProject "GPU-Sorting" */;
@@ -195,14 +136,13 @@
 			);
 			mainGroup = F36193762EEAC2D40040AC46;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = F36193802EEAC2D40040AC46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F361937E2EEAC2D40040AC46 /* GPU-Sorting */,
 				F361938B2EEAC2D50040AC46 /* GPU-SortingTests */,
-				F36193952EEAC2D50040AC46 /* GPU-SortingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -210,48 +150,26 @@
 /* Begin PBXResourcesBuildPhase section */
 		F361937D2EEAC2D40040AC46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F361938A2EEAC2D50040AC46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F36193942EEAC2D50040AC46 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F361937B2EEAC2D40040AC46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F36193882EEAC2D50040AC46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F36193922EEAC2D50040AC46 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -261,15 +179,10 @@
 			target = F361937E2EEAC2D40040AC46 /* GPU-Sorting */;
 			targetProxy = F361938D2EEAC2D50040AC46 /* PBXContainerItemProxy */;
 		};
-		F36193982EEAC2D50040AC46 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F361937E2EEAC2D40040AC46 /* GPU-Sorting */;
-			targetProxy = F36193972EEAC2D50040AC46 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F361939E2EEAC2D50040AC46 /* Debug */ = {
+		F361939E2EEAC2D50040AC46 /* Debug configuration for PBXProject "GPU-Sorting" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -333,7 +246,7 @@
 			};
 			name = Debug;
 		};
-		F361939F2EEAC2D50040AC46 /* Release */ = {
+		F361939F2EEAC2D50040AC46 /* Release configuration for PBXProject "GPU-Sorting" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -389,7 +302,7 @@
 			};
 			name = Release;
 		};
-		F36193A12EEAC2D50040AC46 /* Debug */ = {
+		F36193A12EEAC2D50040AC46 /* Debug configuration for PBXNativeTarget "GPU-Sorting" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -421,7 +334,7 @@
 			};
 			name = Debug;
 		};
-		F36193A22EEAC2D50040AC46 /* Release */ = {
+		F36193A22EEAC2D50040AC46 /* Release configuration for PBXNativeTarget "GPU-Sorting" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -453,7 +366,7 @@
 			};
 			name = Release;
 		};
-		F36193A42EEAC2D50040AC46 /* Debug */ = {
+		F36193A42EEAC2D50040AC46 /* Debug configuration for PBXNativeTarget "GPU-SortingTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -474,7 +387,7 @@
 			};
 			name = Debug;
 		};
-		F36193A52EEAC2D50040AC46 /* Release */ = {
+		F36193A52EEAC2D50040AC46 /* Release configuration for PBXNativeTarget "GPU-SortingTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,44 +405,6 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPU-Sorting.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GPU-Sorting";
-			};
-			name = Release;
-		};
-		F36193A72EEAC2D50040AC46 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FQUA2F388;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.GPU-SortingUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "GPU-Sorting";
-			};
-			name = Debug;
-		};
-		F36193A82EEAC2D50040AC46 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FQUA2F388;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.GPU-SortingUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "GPU-Sorting";
 			};
 			name = Release;
 		};
@@ -539,37 +414,25 @@
 		F361937A2EEAC2D40040AC46 /* Build configuration list for PBXProject "GPU-Sorting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F361939E2EEAC2D50040AC46 /* Debug */,
-				F361939F2EEAC2D50040AC46 /* Release */,
+				F361939E2EEAC2D50040AC46 /* Debug configuration for PBXProject "GPU-Sorting" */,
+				F361939F2EEAC2D50040AC46 /* Release configuration for PBXProject "GPU-Sorting" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F36193A02EEAC2D50040AC46 /* Build configuration list for PBXNativeTarget "GPU-Sorting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F36193A12EEAC2D50040AC46 /* Debug */,
-				F36193A22EEAC2D50040AC46 /* Release */,
+				F36193A12EEAC2D50040AC46 /* Debug configuration for PBXNativeTarget "GPU-Sorting" */,
+				F36193A22EEAC2D50040AC46 /* Release configuration for PBXNativeTarget "GPU-Sorting" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F36193A32EEAC2D50040AC46 /* Build configuration list for PBXNativeTarget "GPU-SortingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F36193A42EEAC2D50040AC46 /* Debug */,
-				F36193A52EEAC2D50040AC46 /* Release */,
+				F36193A42EEAC2D50040AC46 /* Debug configuration for PBXNativeTarget "GPU-SortingTests" */,
+				F36193A52EEAC2D50040AC46 /* Release configuration for PBXNativeTarget "GPU-SortingTests" */,
 			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F36193A62EEAC2D50040AC46 /* Build configuration list for PBXNativeTarget "GPU-SortingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F36193A72EEAC2D50040AC46 /* Debug */,
-				F36193A82EEAC2D50040AC46 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */

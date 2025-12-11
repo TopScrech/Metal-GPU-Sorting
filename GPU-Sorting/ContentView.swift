@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  GPU-Sorting
-//
-//  Created by Sergei Saliukov on 11.12.2025.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -13,6 +6,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+            
             Text("Hello, world!")
         }
         .padding()
