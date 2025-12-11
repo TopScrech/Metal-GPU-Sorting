@@ -1,11 +1,4 @@
-//
-//  GPU_SortingApp.swift
-//  GPU-Sorting
-//
-//  Created by Sergei Saliukov on 11.12.2025.
-//
-
-import SwiftUI
+import ScrechKit
 
 @main
 struct GPU_SortingApp: App {

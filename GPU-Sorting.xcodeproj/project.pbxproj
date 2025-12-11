@@ -6,6 +6,10 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F36193B22EEAC5D60040AC46 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F36193B12EEAC5D60040AC46 /* ScrechKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F361938D2EEAC2D50040AC46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -38,6 +42,7 @@
 		F361937C2EEAC2D40040AC46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				F36193B22EEAC5D60040AC46 /* ScrechKit in Frameworks */,
 			);
 		};
 		F36193892EEAC2D50040AC46 /* Frameworks */ = {
@@ -83,6 +88,9 @@
 				F36193812EEAC2D40040AC46 /* GPU-Sorting */,
 			);
 			name = "GPU-Sorting";
+			packageProductDependencies = (
+				F36193B12EEAC5D60040AC46 /* ScrechKit */,
+			);
 			productName = "GPU-Sorting";
 			productReference = F361937F2EEAC2D40040AC46 /* GPU-Sorting.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +144,9 @@
 			);
 			mainGroup = F36193762EEAC2D40040AC46;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F36193B02EEAC5D60040AC46 /* XCRemoteSwiftPackageReference "ScrechKit" */,
+			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = F36193802EEAC2D40040AC46 /* Products */;
 			projectDirPath = "";
@@ -330,7 +341,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -362,7 +373,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -380,9 +391,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPU-Sorting.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GPU-Sorting";
 			};
 			name = Debug;
@@ -401,9 +413,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPU-Sorting.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GPU-Sorting";
 			};
 			name = Release;
@@ -436,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F36193B02EEAC5D60040AC46 /* XCRemoteSwiftPackageReference "ScrechKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TopScrech/ScrechKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F36193B12EEAC5D60040AC46 /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F36193B02EEAC5D60040AC46 /* XCRemoteSwiftPackageReference "ScrechKit" */;
+			productName = ScrechKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F36193772EEAC2D40040AC46 /* Project object */;
 }
