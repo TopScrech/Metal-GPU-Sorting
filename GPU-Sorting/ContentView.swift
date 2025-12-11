@@ -3,6 +3,7 @@ import ScrechKit
 struct ContentView: View {
     @State private var status = "Tap Run to benchmark"
     @State private var cpuTime: Double?
+    @State private var cpuParallelTime: Double?
     @State private var gpuTime: Double?
     @State private var sampleCount = 2_000_000
     @State private var isRunning = false
@@ -35,8 +36,12 @@ struct ContentView: View {
                     Text("CPU .sorted(): \(cpuTime, format: .number.precision(.fractionLength(3))) s")
                 }
                 
+                if let cpuParallelTime {
+                    Text("CPU Parallel: \(cpuParallelTime, format: .number.precision(.fractionLength(3))) s")
+                }
+                
                 if let gpuTime {
-                    Text("GPU Radix Sort: \(gpuTime, format: .number.precision(.fractionLength(3))) s")
+                    Text("GPU Bitonic: \(gpuTime, format: .number.precision(.fractionLength(3))) s")
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -59,6 +64,11 @@ struct ContentView: View {
             let cpuSorted = input.sorted()
             let cpuElapsed = Double(DispatchTime.now().uptimeNanoseconds - cpuStart.uptimeNanoseconds) / 1_000_000_000
             
+            let parallelSorter = CPUParallelSorter()
+            let cpuParStart = DispatchTime.now()
+            let cpuParallelSorted = await parallelSorter.sort(input)
+            let cpuParElapsed = Double(DispatchTime.now().uptimeNanoseconds - cpuParStart.uptimeNanoseconds) / 1_000_000_000
+            
             var gpuElapsed: Double?
             var gpuStatus: String?
             var outputsMatch = false
@@ -67,7 +77,7 @@ struct ContentView: View {
                 do {
                     let (gpuSorted, time) = try await sorter.sort(input)
                     gpuElapsed = time
-                    outputsMatch = gpuSorted == cpuSorted
+                    outputsMatch = (gpuSorted == cpuSorted) && (cpuParallelSorted == cpuSorted)
                 } catch {
                     gpuStatus = "GPU sort failed: \(error.localizedDescription)"
                 }
@@ -77,12 +87,14 @@ struct ContentView: View {
             
             await MainActor.run {
                 cpuTime = cpuElapsed
+                cpuParallelTime = cpuParElapsed
                 gpuTime = gpuElapsed
                 
                 if let gpuElapsed {
-                    let faster = cpuElapsed / gpuElapsed
+                    let gpuSpeedup = cpuElapsed / gpuElapsed
+                    let parSpeedup = cpuElapsed / cpuParElapsed
                     let correctness = outputsMatch ? "Outputs match" : "Mismatch!"
-                    status = "Done. GPU is \(String(format: "%.1fx", faster)) faster. \(correctness)"
+                    status = "Done. GPU \(String(format: "%.1fx", gpuSpeedup)) vs parallel CPU \(String(format: "%.1fx", parSpeedup)). \(correctness)"
                     
                 } else if let gpuStatus {
                     status = gpuStatus
