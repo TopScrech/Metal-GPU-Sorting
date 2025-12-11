@@ -2,11 +2,7 @@ import Foundation
 @preconcurrency import Metal
 
 enum GPUSortError: Error {
-    case noDevice
-    case commandQueue
-    case library
-    case pipeline
-    case bufferCreation
+    case noDevice, commandQueue, library, pipeline, bufferCreation
 }
 
 /// Simple bitonic sort on GPU using a Metal compute kernel.
