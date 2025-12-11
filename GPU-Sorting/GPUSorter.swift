@@ -34,6 +34,7 @@ struct GPUSorter {
         // Copy input and pad with UInt32.max
         buffer.contents().bindMemory(to: UInt32.self, capacity: paddedCount)
         buffer.contents().copyMemory(from: input, byteCount: originalCount * MemoryLayout<UInt32>.stride)
+        
         if originalCount < paddedCount {
             let padStart = buffer.contents().advanced(by: originalCount * MemoryLayout<UInt32>.stride)
             let padCount = paddedCount - originalCount
@@ -43,8 +44,10 @@ struct GPUSorter {
                 .initialize(repeating: UInt32.max, count: padCount)
         }
         
-        guard let commandBuffer = commandQueue.makeCommandBuffer(),
-              let encoder = commandBuffer.makeComputeCommandEncoder() else {
+        guard
+            let commandBuffer = commandQueue.makeCommandBuffer(),
+            let encoder = commandBuffer.makeComputeCommandEncoder()
+        else {
             throw GPUSortError.commandQueue
         }
         
