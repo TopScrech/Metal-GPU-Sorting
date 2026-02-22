@@ -21,6 +21,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3609EE12F4B9F7E00D5A1E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F3609EE22F4B9F8E00D5A1E1 /* UNLICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UNLICENSE.txt; sourceTree = "<group>"; };
 		F361937F2EEAC2D40040AC46 /* GPU-Sorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPU-Sorting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F361938C2EEAC2D50040AC46 /* GPU-SortingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPU-SortingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -56,6 +58,8 @@
 		F36193762EEAC2D40040AC46 = {
 			isa = PBXGroup;
 			children = (
+				F3609EE12F4B9F7E00D5A1E1 /* README.md */,
+				F3609EE22F4B9F8E00D5A1E1 /* UNLICENSE.txt */,
 				F36193812EEAC2D40040AC46 /* GPU-Sorting */,
 				F361938F2EEAC2D50040AC46 /* GPU-SortingTests */,
 				F36193802EEAC2D40040AC46 /* Products */,
