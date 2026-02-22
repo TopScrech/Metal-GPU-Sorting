@@ -3,7 +3,7 @@ import Metal
 @testable import GPU_Sorting
 
 struct GPU_SortingTests {
-    /// Smoke test that GPU bitonic sort produces the same output as CPU `.sorted()`.
+    /// Smoke test that GPU bitonic sort produces the same output as CPU `.sorted()`
     @Test func testGPUSortMatchesCPU() async throws {
         guard MTLCreateSystemDefaultDevice() != nil else { return } // allow headless CI to pass
         let input = (0..<1_000).map { _ in UInt32.random(in: .min ... .max) }
@@ -15,7 +15,7 @@ struct GPU_SortingTests {
         #expect(output == expected)
     }
     
-    /// Simple timing and correctness check for Swift's `.sorted()`.
+    /// Simple timing and correctness check for Swift's `.sorted()`
     @Test func testSwiftSortedPerformance() async throws {
         let input = (0..<50_000).map { _ in Int.random(in: .min ... .max) }
         let start = DispatchTime.now()
@@ -26,7 +26,7 @@ struct GPU_SortingTests {
         #expect(elapsed > 0) // sanity: timing captured
     }
 
-    /// Parallel CPU sorter matches `.sorted()`.
+    /// Parallel CPU sorter matches `.sorted()`
     @Test func testParallelCPUSorter() throws {
         let input = (0..<25_000).map { _ in UInt32.random(in: .min ... .max) }
         let expected = input.sorted()

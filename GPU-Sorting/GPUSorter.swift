@@ -99,11 +99,13 @@ struct GPUSorter {
     private func nextPowerOfTwo(_ n: Int) -> Int {
         var v = n
         v -= 1
+        
         v |= v >> 1
         v |= v >> 2
         v |= v >> 4
         v |= v >> 8
         v |= v >> 16
+        
         return v + 1
     }
 }

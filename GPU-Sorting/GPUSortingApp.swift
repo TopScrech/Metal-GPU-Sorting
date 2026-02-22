@@ -1,7 +1,7 @@
 import ScrechKit
 
 @main
-struct GPU_SortingApp: App {
+struct GPUSortingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
