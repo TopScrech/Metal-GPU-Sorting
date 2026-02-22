@@ -1,19 +1,17 @@
 import Foundation
 
-/// Simple parallel merge sort using DispatchQueues.
-struct CPUParallelSorter {
+/// Simple parallel merge sort using Swift Concurrency
+nonisolated struct CPUParallelSorter {
     private let minChunk = 20_000
-    private let queue = DispatchQueue.global(qos: .userInitiated)
     
-    func sort(_ input: [UInt32]) -> [UInt32] {
-        return parallelSort(input, depth: ProcessInfo.processInfo.processorCount)
+    func sort(_ input: [UInt32]) async -> [UInt32] {
+        await parallelSort(input, depth: ProcessInfo.processInfo.processorCount)
     }
     
-    private func parallelSort(_ input: [UInt32], depth: Int) -> [UInt32] {
+    private func parallelSort(_ input: [UInt32], depth: Int) async -> [UInt32] {
         let count = input.count
         guard count > 1 else { return input }
         
-        // Use serial sort when small or no more parallel depth
         if count <= minChunk || depth <= 1 {
             return input.sorted()
         }
@@ -22,24 +20,10 @@ struct CPUParallelSorter {
         let leftSlice = Array(input[..<mid])
         let rightSlice = Array(input[mid...])
         
-        var leftResult: [UInt32] = []
-        var rightResult: [UInt32] = []
-        let group = DispatchGroup()
+        async let leftResult = parallelSort(leftSlice, depth: depth / 2)
+        async let rightResult = parallelSort(rightSlice, depth: depth / 2)
         
-        group.enter()
-        queue.async {
-            leftResult = parallelSort(leftSlice, depth: depth / 2)
-            group.leave()
-        }
-        
-        group.enter()
-        queue.async {
-            rightResult = parallelSort(rightSlice, depth: depth / 2)
-            group.leave()
-        }
-        
-        group.wait()
-        return merge(leftResult, rightResult)
+        return merge(await leftResult, await rightResult)
     }
     
     private func merge(_ left: [UInt32], _ right: [UInt32]) -> [UInt32] {

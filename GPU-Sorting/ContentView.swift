@@ -5,7 +5,7 @@ struct ContentView: View {
     @State private var cpuTime: Double?
     @State private var cpuParallelTime: Double?
     @State private var gpuTime: Double?
-    @State private var sampleCount = 2_000_000
+    @State private var sampleCount = 100_000_000
     @State private var isRunning = false
     
     var body: some View {

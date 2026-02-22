@@ -27,12 +27,12 @@ struct GPU_SortingTests {
     }
 
     /// Parallel CPU sorter matches `.sorted()`
-    @Test func testParallelCPUSorter() throws {
+    @Test func testParallelCPUSorter() async throws {
         let input = (0..<25_000).map { _ in UInt32.random(in: .min ... .max) }
         let expected = input.sorted()
 
         let sorter = CPUParallelSorter()
-        let output = sorter.sort(input)
+        let output = await sorter.sort(input)
 
         #expect(output == expected)
     }
